@@ -40,6 +40,8 @@ if not(os.path.exists(MoleculeName)):
 with open(MoleculeName+"/molparam_id.txt", 'w') as f:
     Text2Write = "#### Species ID (A2) format\n%s\n#### molparam value\n%s" %(MolecularID, str(Abundance))
     f.write(Text2Write)
+
+os.system("cp prT_Data/wlen.dat %s/" %MoleculeName)
  
 
 for TValue, PValue in list(itertools.product(Temp_Array,Pressure_Array)):
